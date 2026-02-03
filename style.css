@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fondo */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(120deg, #0b0f19, #0f172a, #1e293b);
+    z-index: -1;
+}
+
+/* Nombre esquina */
+.server-tag {
+    position: fixed;
+    top: 25px;
+    left: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+/* HERO ocupa pantalla completa */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card {
+    width: 650px;
+    padding: 55px;
+    border-radius: 25px;
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 80px rgba(56,189,248,0.25);
+
+    animation: aparecer 1.2s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h1 {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 20px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    box-shadow: 0 0 30px rgba(168,85,247,0.6);
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 45px rgba(56,189,248,0.9);
+}
+
+/* DIVISOR */
+.features {
+    padding: 120px 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.25));
+}
+
+/* Título */
+.features h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: 280px;
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(168,85,247,0.5);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    opacity: 0.6;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
